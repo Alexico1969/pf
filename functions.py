@@ -11,7 +11,7 @@ def create_assistant(client):
             assistant_id = assistant_data['assistant_id']
             print("Loaded existing assistant ID.")
     else:
-        file = client.files.create(file=open("DreamDeferred-info.pdf", "rb"),
+        file = client.files.create(file=open("dd_info.txt", "rb"),
                                    purpose='assistants')
 
         assistant = client.beta.assistants.create(
